@@ -1,16 +1,15 @@
-
 import { ReactNode } from "react";
-import styles from "@/app/page.module.css"
+import styles from "@/app/(beforeLogin)/_component/main.module.css";
 
-type Props = {children: ReactNode, modal: ReactNode}
+type Props = { children: ReactNode; modal: ReactNode };
 
-export default function Layout ({children, modal}:Props) {
-    return (
-        <div className={styles.container}>
-            {children}
-            {modal}
-        </div>
-    )
+export default function Layout({ children, modal }: Props) {
+  return (
+    <div className={styles.container}>
+      {children}
+      {modal}
+    </div>
+  );
 }
 
 //주소가 localhost:3000 일때는 children은 page.tsx , modal->@modaldefault.tsx
